@@ -16,7 +16,7 @@ import cn.nukkit.command.data.CommandParamType;
 
 /**
  * @author  ImHammer DEV &lt;undefined@undefined.com&gt;
- * @version 1.1.0
+ * @version 1.1.1
  * @since   1.1.0
  */ 
 public class Line
@@ -102,19 +102,23 @@ public class Line
     /**
      * Default executor style
      * @param execute executor
+     * @return the line
      */
-    public void onRawExecute(RawCommandExecute execute)
+    public Line onRawExecute(RawCommandExecute execute)
     {
         this.rawExecute = execute;
+        return this;
     }
 
     /**
      * Comming soon...
      * @param execute Comming soon...
+     * @return the line
      */
-    public void onSoftExecute(SoftCommandExecute execute)
+    public Line onSoftExecute(SoftCommandExecute execute)
     {
         this.softExecute = execute;
+        return this;
     }
 
     /**
