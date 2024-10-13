@@ -16,7 +16,7 @@ import cn.nukkit.command.data.CommandParamType;
 
 /**
  * @author  ImHammer DEV &lt;undefined@undefined.com&gt;
- * @version 1.1.1
+ * @version 1.1.2
  * @since   1.1.0
  */ 
 public class Line
@@ -134,8 +134,8 @@ public class Line
             if (args.length > 0) {
                 if (this.startLineType == StartLineType.OPTION || this.startLineType == StartLineType.OPTIONS) {
                     selectedOption = args[0];
-                    if (args.length > 1) {
-                        args = Arrays.copyOfRange(args, 1, args.length - 1);
+                    if (args.length > 0) {
+                        args = Arrays.copyOfRange(args, 1, args.length);
                     } else {
                         args = new String[0];
                     }
